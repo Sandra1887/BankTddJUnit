@@ -18,6 +18,36 @@ by Sandra Jeppsson Kristiansson
     + withdrawal(double amount)
 
 
++ Employee
+  - String employeeName
+  - int employeeNumber
+  + getEmployeeName() return String
+  + setEmployeeName(String name)
+  + getEmployeeNumber() return int
+  + setEmployeeNumber(int employeeNumber)
+  + withdrawal(int employeeNumber, int pinCode, Bank bank, int amount) return boolean
+  + hasAuthorization(int employeeNumber, int pinCode) return boolean
+
+
++ AuthorizationTestTrue *(Test where the input is correct and the outcome true)*
+  + Employee sut
+  + Bank sutBank
+  + testWithdrawal()
+
+
++ AuthorizationTestFalse *(Test where the input is incorrect and the outcome false)*
+  + Employee sut;
+  + Bank sutBank;
+  + testWithdrawal()
+  
+
++ AuthorzationTest1of2 *(Failing test where 1 out of 2 inputs is correct)*
+  + Employee sut;
+  + Bank sutBank;
+  + testWithdrawal()
+  
+
+
 + Main
     + testDeposit()
     + testWithdrawal()
@@ -31,5 +61,5 @@ by Sandra Jeppsson Kristiansson
 
 ***License MIT***
 
-***2023-05-22***
+***2023-05-24***
 
